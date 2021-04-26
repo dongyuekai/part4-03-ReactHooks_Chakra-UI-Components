@@ -20,7 +20,7 @@ import axios from 'axios'
 //   )
 // }
 
-// 自定义表单属性的hook
+// 自定义封装表单属性的hook
 function useUpdateInput(initialValue) {
   const [value, setValue] = useState(initialValue)
   return {

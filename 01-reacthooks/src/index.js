@@ -10,6 +10,8 @@ import _Memo from './_Memo'
 import _UseCallback from './_UseCallback'
 import _UseRef from './_UseRef'
 import _SelfHook from './_SelfHook'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,7 +24,10 @@ ReactDOM.render(
     {/* <_Memo /> */}
     {/* <_UseCallback /> */}
     {/* <_UseRef /> */}
-    <_SelfHook />
+    {/* <_SelfHook /> */}
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
