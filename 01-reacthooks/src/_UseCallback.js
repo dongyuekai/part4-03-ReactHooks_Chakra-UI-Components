@@ -1,0 +1,31 @@
+import React, { useState, useCallback, memo } from 'react'
+
+
+function _UseCallback() {
+
+  const [count, setCount] = useState(0)
+
+  const resetCount = useCallback(() => {
+    setCount(0)
+  }, [setCount])
+
+  return (
+    <div>
+      <span>{count}</span>
+      <button onClick={() => setCount(count + 1)}>+1</button>
+      <Foo resetCount={resetCount} />
+    </div>
+  )
+}
+
+const Foo = memo(function Foo(props) {
+  console.log('Foo组件重新渲染了~~~')
+  return (
+    <div>
+      我是Foo组件
+      <button onClick={props.resetCount}>resetCount</button>
+    </div>
+  )
+})
+
+export default _UseCallback
