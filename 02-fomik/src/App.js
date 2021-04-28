@@ -1,25 +1,34 @@
 import React from 'react'
 import { Formik, useFormik } from 'formik'
+import * as Yup from 'yup'
 
 function App() {
   const formik = useFormik({
     initialValues: {
       username: 'zhangsan',
-      password: '12345',
+      password: '',
     },
-    validate: values => {
-      const errors = {
-      }
-      if (!values.username) {
-        errors.username = '请输入用户名'
-      } else if (values.username.length > 8) {
-        errors.username = '用户名长度不能大于8'
-      }
-      if (values.password.length < 6) {
-        errors.password = '密码长度不能小于6'
-      }
-      return errors
-    },
+    // validate: values => {
+    //   const errors = {
+    //   }
+    //   if (!values.username) {
+    //     errors.username = '请输入用户名'
+    //   } else if (values.username.length > 8) {
+    //     errors.username = '用户名长度不能大于8'
+    //   }
+    //   if (values.password.length < 6) {
+    //     errors.password = '密码长度不能小于6'
+    //   }
+    //   return errors
+    // },
+    validationSchema: Yup.object({
+      username: Yup.string()
+        .max(15, '用户名的长度不能大于15')
+        .required('用户名不能为空'),
+      password: Yup.string()
+        .min(6, '用户名的长度不能小于6')
+        .required('密码不能为空'),
+    }),
     onSubmit: (values) => {
       console.log(values)
     }
