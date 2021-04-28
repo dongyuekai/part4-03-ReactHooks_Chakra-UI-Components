@@ -11,10 +11,11 @@ import _UseCallback from './_UseCallback'
 import _UseRef from './_UseRef'
 import _SelfHook from './_SelfHook'
 import { BrowserRouter as Router } from 'react-router-dom'
+import _UseYL from './_UseYL'
 import App from './App'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div>
     {/* <_UseState /> */}
     {/* <_UseReducer /> */}
     {/* <_CreateContext /> */}
@@ -25,9 +26,10 @@ ReactDOM.render(
     {/* <_UseCallback /> */}
     {/* <_UseRef /> */}
     {/* <_SelfHook /> */}
-    <Router>
+    {/* <Router>
       <App />
-    </Router>
-  </React.StrictMode>,
+    </Router> */}
+    <_UseYL />
+  </div>,
   document.getElementById('root')
 );

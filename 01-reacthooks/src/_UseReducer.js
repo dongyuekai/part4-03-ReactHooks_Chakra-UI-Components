@@ -1,5 +1,7 @@
 import React, { useReducer } from 'react'
+
 function _UseReducer() {
+
   function reducer(state, action) {
     switch (action.type) {
       case 'increment':
