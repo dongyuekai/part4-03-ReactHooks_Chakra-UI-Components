@@ -38,17 +38,19 @@ function App() {
       <input
         type='text'
         name='username'
-        value={formik.values.username}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+        // value={formik.values.username}
+        // onChange={formik.handleChange}
+        // onBlur={formik.handleBlur}
+        {...formik.getFieldProps('username')}
       />
       <p style={{ color: 'red' }}>{formik.touched.username && formik.errors.username ? formik.errors.username : null}</p>
       <input
         type='text'
         name='password'
-        value={formik.values.password}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+        // value={formik.values.password}
+        // onChange={formik.handleChange}
+        // onBlur={formik.handleBlur}
+        {...formik.getFieldProps('password')}
       />
       <p style={{ color: 'red' }}>{formik.touched.password && formik.errors.password ? formik.errors.password : null}</p>
       <input type='submit' />
