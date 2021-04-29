@@ -6,6 +6,7 @@ import Demo from './Demo'
 import Child from './Child'
 import Compose from './Compose'
 import Global from './Global'
+import Animation from './Animation'
 
 ReactDOM.render(
   <div>
@@ -14,7 +15,8 @@ ReactDOM.render(
     {/* <Demo/> */}
     {/* <Child /> */}
     {/* <Compose /> */}
-    <Global />
+    {/* <Global /> */}
+    <Animation />
   </div>,
   document.getElementById('root')
 );
