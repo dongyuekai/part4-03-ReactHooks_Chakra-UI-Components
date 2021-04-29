@@ -18,11 +18,16 @@ const Parent = styled.div({
   }
 })
 
+const Button = styled.button`
+  color: red;
+`
+
 function App() {
   return (
     <div>
       <Child>child</Child>
       <Parent><Child>被Parent包裹的Child</Child></Parent>
+      <Button as='a' href='#'>按钮</Button>
     </div>
   )
 }
