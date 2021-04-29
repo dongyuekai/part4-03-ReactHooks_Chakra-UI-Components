@@ -8,8 +8,9 @@ function App() {
     <Box w='200px' h='100px' bgColor={bgColor}>
       <Text>当前颜色模式为{colorMode}</Text>
       <LightMode>
-        <Button onClick={toggleColorMode}>按钮</Button>
+        <Button onClick={toggleColorMode}>按钮1</Button>
       </LightMode>
+      <Button onClick={toggleColorMode}>按钮2</Button>
     </Box>
   );
 }
