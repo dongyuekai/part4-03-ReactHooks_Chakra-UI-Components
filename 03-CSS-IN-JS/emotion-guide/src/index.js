@@ -5,6 +5,7 @@ import Styled from './Styled'
 import Demo from './Demo'
 import Child from './Child'
 import Compose from './Compose'
+import Global from './Global'
 
 ReactDOM.render(
   <div>
@@ -12,7 +13,8 @@ ReactDOM.render(
     {/* <Styled /> */}
     {/* <Demo/> */}
     {/* <Child /> */}
-    <Compose />
+    {/* <Compose /> */}
+    <Global />
   </div>,
   document.getElementById('root')
 );
