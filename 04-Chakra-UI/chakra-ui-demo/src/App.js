@@ -5,7 +5,8 @@ function App() {
   const bgColor = useColorModeValue('tomato', 'skyblue')
   return (
     // <Box w='200px' h='100px' bgColor={colorMode === 'dark' ? 'tomato' : 'skyblue'}>
-    <Box w='200px' h='100px' bgColor={bgColor}>
+    // <Box w='200px' h='100px' bgColor={bgColor}>
+    <Box w='2xs' h='100px' bgColor={bgColor}>
       <Text bgColor="gray.600">当前颜色模式为{colorMode}</Text>
       <LightMode>
         <Button onClick={toggleColorMode}>按钮1</Button>
