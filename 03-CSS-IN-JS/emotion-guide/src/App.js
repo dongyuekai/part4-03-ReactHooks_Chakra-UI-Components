@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
+import CSS from './CSS'
 
 // 调用方式1 推荐
 const style = css`
@@ -17,7 +18,8 @@ const style2 = css({
 function App() {
   return (
     // <div css={style}>App dsfds</div>
-    <div css={style2}>sfsdf</div>
+    // <div css={style2}>sfsdf</div>
+    <CSS css={style2} />
   );
 }
 
