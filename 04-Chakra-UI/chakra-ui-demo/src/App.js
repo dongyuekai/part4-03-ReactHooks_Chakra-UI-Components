@@ -1,9 +1,12 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Box, useColorMode, Text } from '@chakra-ui/react'
+
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
-    <div className="App">
-      <Button>按钮</Button>
-    </div>
+    <Box w='200px' h='100px' bgColor={colorMode === 'dark' ? 'tomato' : 'skyblue'}>
+      <Text>当前颜色模式为{colorMode}</Text>
+      <Button onClick={toggleColorMode}>按钮</Button>
+    </Box>
   );
 }
 
