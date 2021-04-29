@@ -3,6 +3,9 @@ import styled from '@emotion/styled'
 
 const Child = styled.div`
   color: red;
+  &:hover {
+    background:red
+  }
 `
 // const Parent = styled.div`
 //   ${Child}{
