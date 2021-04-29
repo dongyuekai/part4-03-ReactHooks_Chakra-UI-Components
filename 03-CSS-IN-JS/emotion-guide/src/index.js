@@ -7,16 +7,25 @@ import Child from './Child'
 import Compose from './Compose'
 import Global from './Global'
 import Animation from './Animation'
+import { ThemeProvider } from '@emotion/react'
+import Theme from './Theme'
+
+const theme = {
+  colors: {
+    primary: 'tomato'
+  }
+}
 
 ReactDOM.render(
-  <div>
+  <ThemeProvider theme={theme}>
     {/* <App /> */}
     {/* <Styled /> */}
     {/* <Demo/> */}
     {/* <Child /> */}
     {/* <Compose /> */}
     {/* <Global /> */}
-    <Animation />
-  </div>,
+    {/* <Animation /> */}
+    <Theme />
+  </ThemeProvider>,
   document.getElementById('root')
 );
