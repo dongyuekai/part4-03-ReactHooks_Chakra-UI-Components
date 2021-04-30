@@ -9,8 +9,7 @@ import {
   Button,
   FormControl
 } from '@chakra-ui/react'
-import { FaUserAlt, FaLock, FaCheck } from 'react-icons/fa'
-
+import { FaUserAlt, FaLock, FaQq, FaWeixin, FaWeibo } from 'react-icons/fa'
 export default function SignIn() {
   return (
     <form>
